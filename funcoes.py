@@ -1,4 +1,4 @@
-def define_posicoes(linha,coluna,orientacao,tamanho):
+def define_posicoes(linha, coluna, orientacao, tamanho):
     posicoes = []
 
     for i in range(tamanho):
@@ -8,7 +8,8 @@ def define_posicoes(linha,coluna,orientacao,tamanho):
             posicoes.append([linha,coluna + i])
     return posicoes
 
-def preenche_frota(frota,nome_do_navio,linha,coluna,orientacao,tamanho):
+
+def preenche_frota(frota, nome_do_navio, linha, coluna, orientacao, tamanho):
 
     navio = define_posicoes(linha,coluna,orientacao,tamanho)
 
@@ -17,3 +18,15 @@ def preenche_frota(frota,nome_do_navio,linha,coluna,orientacao,tamanho):
     frota[nome_do_navio].append(navio)
 
     return frota
+
+
+def faz_jogada(tabuleiro, linha, coluna):
+    if tabuleiro[linha][coluna] == 1:
+        tabuleiro[linha][coluna] = "X"
+    elif tabuleiro[linha][coluna] == 0:
+        tabuleiro[linha][coluna] = "-"
+
+    return tabuleiro
+
+
+
