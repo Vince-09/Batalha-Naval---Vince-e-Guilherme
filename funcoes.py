@@ -28,5 +28,3 @@ def faz_jogada(tabuleiro, linha, coluna):
 
     return tabuleiro
 
-
-
