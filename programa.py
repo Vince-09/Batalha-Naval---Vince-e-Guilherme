@@ -106,9 +106,20 @@ while jogando == True:
             print("Parabéns! Você derrubou todos os navios do seu oponente!")
             jogando = False
 
+    import random
 
-
-
+    if jogando == True:
+        repetido = True
+        while repetido == True:
+            linha_op = random.randint(0,9)
+            coluna_op = random.randint(0,9)
+            if tabuleiro_jogador[linha_op][coluna_op] != 'X' and tabuleiro_jogador[linha_op][coluna_op] != '-':
+                repetido = False
+        print(f'Seu oponente está atacando na linha {linha_op} e coluna {coluna_op}')
+        tabuleiro_jogador = faz_jogada(tabuleiro_jogador, linha_op, coluna_op)
+        if afundados(frota,tabuleiro_jogador) == 10:
+            print('Xi! O oponente derrubou toda a sua frota =(')
+            jogando = False
         
 
 
